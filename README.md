@@ -82,6 +82,8 @@ bash run.sh
 
 No manual steps, no pre-installed packages required beyond standard system tools.
 
+> **Note on training:** The default `bash run.sh` evaluates the **pre-trained checkpoint** included in the repo (`checkpoints/level_3_severe_fault.zip`). Training from scratch is intentionally skipped because the full curriculum takes several hours on CPU and is impractical inside an evaluation container. To train from scratch instead: `bash run.sh train`
+
 ---
 
 ## Manual Setup (any platform)

@@ -17,7 +17,13 @@ if [ -f "venv/bin/activate" ]; then
     source venv/bin/activate
 fi
 
-EPISODES="${2:-100}"
+EPISODES=100
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --episodes) EPISODES="$2"; shift 2 ;;
+        *) shift ;;
+    esac
+done
 
 echo ""
 echo "=========================================="
